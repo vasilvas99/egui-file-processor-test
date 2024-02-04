@@ -20,7 +20,7 @@ fn main() -> Result<(), eframe::Error> {
         ..Default::default()
     };
     eframe::run_native(
-        "Native file dialogs and drag-and-drop files",
+        "Drag and drop file processor",
         options,
         Box::new(|_cc| {
             Box::from(MyApp {
@@ -121,7 +121,7 @@ impl FileProcessingThread {
 impl eframe::App for MyApp {
     fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
         egui::CentralPanel::default().show(ctx, |ui| {
-            ui.label("Drag-and-drop files onto the window!");
+            ui.label("Drag-and-drop files onto the window");
 
             let central_panel_rect = ui.available_rect_before_wrap();
 
